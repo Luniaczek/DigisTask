@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
     @ParameterizedTest
-    @CsvSource({"below,elbow", "study,DUSTY", "act!,cat!", "anagram,nag a ram"})
+    @CsvSource({"below,elbow", "cloud,cloud", "study,DUSTY", "act!,cat!", "anagram,nag a ram"})
     public void testIsAnagramTrue(String first, String second) {
         assertTrue(Main.isAnagram(first, second));
     }
