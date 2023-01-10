@@ -18,25 +18,24 @@ public class Main {
         System.out.println("Type second String:");
         String second = scanner.nextLine();
 
-        if (isAnagram(first, second)){
-            System.out.println("Provided Strings are anagrams");
+        if (isAnagram(first, second)) {
+            System.out.println(first + " and " + second + " are anagrams");
         } else {
-            System.out.println("Provided Strings aren't anagrams");
+            System.out.println(first + " and " + second + " aren't anagrams");
         }
     }
 
     public static boolean isAnagram(String first, String second) {
-        first = first.toLowerCase().replaceAll("\\s+","");
-        second = second.toLowerCase().replaceAll("\\s+","");
+        first = first.toLowerCase().replaceAll("\\s+", "");
+        second = second.toLowerCase().replaceAll("\\s+", "");
 
-        if (first.isEmpty() && second.isEmpty()){
+        if (first.isEmpty() && second.isEmpty()) {
             return false;
         }
 
         if (first.length() != second.length()) {
             return false;
         }
-
 
         char[] letters1 = first.toCharArray();
         char[] letters2 = second.toCharArray();

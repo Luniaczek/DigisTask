@@ -21,6 +21,8 @@ public class MainTest {
     @ParameterizedTest
     @CsvSource({",", ",notnull", "notnull,"})
     public void testIsAnagramWithNulls(String first, String second) {
-        assertThrows(java.lang.NullPointerException.class, () -> { Main.isAnagram(first, second);});
+        assertThrows(java.lang.NullPointerException.class, () -> {
+            Main.isAnagram(first, second);
+        });
     }
 }
