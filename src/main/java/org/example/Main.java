@@ -26,12 +26,20 @@ public class Main {
     }
 
     public static boolean isAnagram(String first, String second) {
+        first = first.toLowerCase().replaceAll("\\s+","");
+        second = second.toLowerCase().replaceAll("\\s+","");
+
+        if (first.isEmpty() && second.isEmpty()){
+            return false;
+        }
+
         if (first.length() != second.length()) {
             return false;
         }
 
-        char[] letters1 = first.toLowerCase().replaceAll("\\s+","").toCharArray();
-        char[] letters2 = second.toLowerCase().replaceAll("\\s+","").toCharArray();
+
+        char[] letters1 = first.toCharArray();
+        char[] letters2 = second.toCharArray();
         Arrays.sort(letters1);
         Arrays.sort(letters2);
         return Arrays.equals(letters1, letters2);
